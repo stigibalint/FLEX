@@ -1,119 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
+
 <style>
-    @media(min-width:468px) {
-        .container-1 {
-            display: flex;
-            /*
-        align-items: flex-strat;
-        flex-direction: column;
-        */
-        }
-        .container-2 {
-            display: flex;
-            /* justify-content: flex-start;
-        justify-content: flex-end;
-        */
-            justify-content: space-between;
-        }
+    html,
+    body {
+        padding: 0;
+        margin: 0;
     }
     
-    .container-3 {
+    input {
+        font-size: 14px;
+        font-family: Helvetica, sans-serif;
+    }
+    
+    body {
+        background-color: #BBB;
+        font-family: Helvetica, sans-serif;
+        padding-bottom: 100px;
+    }
+    
+    h2,
+    h3 {
+        margin: 0 0 .75em 0;
+    }
+    
+    .container {
+        max-width: 750px;
+        margin: 20px auto 0 auto;
+        padding: 30px;
+        background-color: #FFF;
+    }
+    
+    .form-row {
+        padding: 10px 0;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
     }
     
-    .container-1 div,
-    .container-2 div,
-    .container-3 div {
-        border: 1px #ccc solid;
-        padding: 10px;
+    .form-row label {
+        padding-right: 10px;
     }
     
-    .box-1 {
-        flex: 2;
+    .form-row input {
+        flex: 1;
+    }
+    
+    .column-layout {
+        max-width: 1300px;
+        background-color: #FFF;
+        margin: 40px auto 0 auto;
+        line-height: 1.65;
+        padding: 20px 50px;
+        display: flex;
+    }
+    
+    .main-column {
+        flex: 3;
         order: 2;
     }
     
-    .box-2 {
+    .sidebar-one {
         flex: 1;
         order: 1;
     }
     
-    .box-3 {
+    .sidebar-two {
         flex: 1;
         order: 3;
     }
     
-    .container-2-box {
-        flex-basis: 27%;
+    .call-outs-container {
+        max-width: 1400px;
+        margin: 40px auto 0 auto;
     }
     
-    .container-3-box {
-        flex-basis: 12%;
+    .call-out {
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        flex-basis: 30%;
+    }
+    
+    @media (min-width: 900px) {
+        .call-outs-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    .call-out:nth-child(1) {
+        background-color: #c0dbe2;
+    }
+    
+    .call-out:nth-child(2) {
+        background-color: #cdf1c3;
+    }
+    
+    .call-out:nth-child(3) {
+        background-color: #ccb9da;
+    }
+    
+    .fixed-size-container {
+        max-width: 1400px;
+        margin: 40px auto 0 auto;
+        background-color: #FFF;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .fixed-size {
+        width: 150px;
+        height: 100px;
+        background-color: #990b47;
+        color: #FFF;
+        line-height: 100px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .banner {
+        height: 400px;
+        max-width: 700px;
+        margin: 40px auto 40px auto;
+        background-color: #2a2a2a;
+        display: flex;
+    }
+    
+    .center-me {
+        color: #FFF;
+        font-size: 50px;
+        margin: auto;
     }
 </style>
 
 <body>
-    <div class="container-1">
-        <div class="box-1">
-            <h3>Box One</h3>
-            <p>Lorem sf2aaaaaaaaaaaaaaaa</p>
+
+
+    <div class="column-layout">
+        <div class="main-column">
+            <h2>Main Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur amet laudantium minima consectetur tenetur. Repudiandae, autem, voluptate modi deleniti sequi
+                voluptatum!
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum fugit veniam amet quae sint vitae numquam dolore sunt quod a odio officia voluptate doloribus, at. Cum quasi mollitia eaque. Voluptatibus soluta, consequuntur, reiciendis
+                debitis omnis fugiat libero pariatur amet laudantium.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur amet laudantium minima consectetur tenetur. Repudiandae, autem, voluptate modi deleniti sequi
+                voluptatum!
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum fugit veniam amet quae sint vitae numquam dolore sunt quod a odio officia voluptate doloribus, at. Cum quasi mollitia eaque.</p>
         </div>
-        <div class="box-2">
-            <h3>Box two</h3>
-            <p>Lorem aaaaaaaaaaaaaaaaaa</p>
+        <div class="sidebar-one">
+            <h3>Sidebar One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum modi nisi tenetur sint dignissimos nulla, blanditiis nesciunt.</p>
         </div>
-        <div class="box-3">
-            <h3>Box Three</h3>
-            <p>Lorem aaaaaaaaaaaaaaaaaa</p>
+
+        <div class="sidebar-two">
+            <h3>Sidebar Two</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum modi nisi tenetur sint dignissimos nulla, blanditiis nesciunt.</p>
         </div>
     </div>
 
-    <div class="container-2">
-        <div class="container-2-box">
-            <h3>Box Four</h3>
-            <p>Lorem sf2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        </div>
-        <div class="container-2-box">
-            <h3>Box Five</h3>
-            <p>Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        </div>
-        <div class="container-2-box">
-            <h3>Box Six</h3>
-            <p>Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <div class="call-outs-container">
+        <div class="call-out">
+            <h4>Feature 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit consectetur nobis molestias! Explicabo deserunt. Consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam placeat numquam
+                omnis sit consectetur.</p>
         </div>
 
-        <div class="container-3">
-            <div class="container-3-box">
-                <h3>Box Seven</h3>
-                <p>Lorem sf2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
-            <div class="container-3-box">
-                <h3>Box Eight</h3>
-                <p>Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
-            <div class="container-3-box">
-                <h3>Box Nine</h3>
-                <p>Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
-            <div class="container-3-box">
-                <h3>Box Ten</h3>
-                <p>Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
-            <div class="container-3-box">
-                <h3>Box Eleven</h3>
-                <p>Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
+        <div class="call-out">
+            <h4>Feature 2</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit consectetur nobis molestias! Explicabo deserunt placeat numquam omnis.</p>
+        </div>
+
+        <div class="call-out">
+            <h4>Feature 3</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit.</p>
+        </div>
+    </div>
+
+
+
+    <div class="fixed-size-container">
+        <div class="fixed-size">1</div>
+        <div class="fixed-size">2</div>
+        <div class="fixed-size">3</div>
+        <div class="fixed-size">4</div>
+        <div class="fixed-size">5</div>
+    </div>
+
+
+    <div class="banner">
+        <div class="center-me">Center Me Plz</div>
+    </div>
+
+    </div>
 </body>
 
 </html>
